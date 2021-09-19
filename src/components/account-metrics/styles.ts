@@ -28,5 +28,5 @@ export const Ammount = styled.Text`
   color: ${(props) => props.theme.colors.black};
   font-size: 32px;
   font-family: ${(props) => props.theme.fonts.medium};
-  margin-top: 24px;
+  margin-top: 20px;
 `;

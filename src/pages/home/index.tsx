@@ -1,18 +1,29 @@
-import React from 'react';
-import AccountMetrics from '../../components/account-metrics';
-import ActionList from '../../components/action-list';
-import Header from '../../components/header';
-import MyCards from '../../components/my-cards';
-import { Container } from './styles';
+import React from "react";
+import { ScrollView } from "react-native";
+import AccountMetrics from "../../components/account-metrics";
+import ActionList from "../../components/action-list";
+import Divider from "../../components/divider";
+import Header from "../../components/header";
+import MyCards from "../../components/my-cards";
+import { ligthTheme } from "../../styles/themes/light";
+import { Container, ContentContainer } from "./styles";
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Header />
-      <AccountMetrics />
-      <ActionList />
-      <MyCards />
-    </Container>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ backgroundColor: ligthTheme.colors.primary }}
+    >
+      <Container>
+        <Header />
+        <ContentContainer>
+          <AccountMetrics />
+          <ActionList />
+          <MyCards />
+          <Divider />
+        </ContentContainer>
+      </Container>
+    </ScrollView>
   );
 };
 
