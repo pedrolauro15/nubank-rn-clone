@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import Home from "./src/pages/home";
+import {
+  useFonts,
+  Roboto_300Light,
+  Roboto_400Regular,
+  Roboto_500Medium,
+  Roboto_700Bold,
+} from "@expo-google-fonts/roboto";
+import { ThemeProvider } from "styled-components/native";
+import { ligthTheme } from "./src/styles/themes/light";
+import styled from "styled-components/native";
 
-export default function App() {
+const App: React.FC = () => {
+  const [fontsLoaded] = useFonts({
+    ligth: Roboto_300Light,
+    regular: Roboto_400Regular,
+    medium: Roboto_500Medium,
+    bold: Roboto_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={ligthTheme}>
+      <AppContainer>
+        <Home />
+      </AppContainer>
+    </ThemeProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const AppContainer = styled.View`
+  flex: 1;
+  background-color: ${(props) => props.theme.colors.white};
+`;
+
+export default App;
