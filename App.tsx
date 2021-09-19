@@ -10,6 +10,7 @@ import {
 import { ThemeProvider } from "styled-components/native";
 import { ligthTheme } from "./src/styles/themes/light";
 import styled from "styled-components/native";
+import { StatusBar } from "expo-status-bar";
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -25,6 +26,11 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={ligthTheme}>
+      <StatusBar
+        backgroundColor={ligthTheme.colors.primary}
+        style="inverted"
+        hidden={false}
+      />
       <AppContainer>
         <Home />
       </AppContainer>
