@@ -2,6 +2,7 @@ import React from 'react';
 import AccountMetrics from '../../components/account-metrics';
 import ActionList from '../../components/action-list';
 import Header from '../../components/header';
+import MyCards from '../../components/my-cards';
 import { Container } from './styles';
 
 const Home: React.FC = () => {
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <Header />
       <AccountMetrics />
       <ActionList />
+      <MyCards />
     </Container>
   );
 };
