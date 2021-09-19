@@ -2,6 +2,7 @@ import { RectButton } from "react-native-gesture-handler";
 import styled from "styled-components/native";
 import Constatns from "expo-constants";
 import { Feather, SimpleLineIcons } from "@expo/vector-icons";
+import { mediaquery } from "../../styles/mediaquery";
 
 const PROFILE_BUTTON_SIZE = 48;
 
@@ -28,7 +29,7 @@ export const ProfileButton = styled(RectButton)`
 
 export const Icon = styled(Feather)`
   color: ${(props) => props.theme.colors.white};
-  font-size: 22px;
+  font-size: ${mediaquery(24)}px;
 `;
 
 export const RightSection = styled.View`
@@ -42,12 +43,12 @@ export const IconButton = styled.TouchableOpacity`
 
 export const SlIcon = styled(SimpleLineIcons)`
   color: ${(props) => props.theme.colors.white};
-  font-size: 20px;
+  font-size: ${mediaquery(20)}px;
 `;
 
 export const Username = styled.Text`
   margin-top: 32px;
   color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts.bold};
-  font-size: 24px;
+  font-size: ${mediaquery(24)}px;
 `;

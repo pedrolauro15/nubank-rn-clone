@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import { FontAwesome } from "@expo/vector-icons";
 import { RectButton } from "react-native-gesture-handler";
+import { mediaquery } from "../../styles/mediaquery";
 
 export const Container = styled.View`
   padding: 16px 24px;
@@ -17,7 +18,7 @@ export const CardButton = styled(RectButton)`
 
 export const Icon = styled(FontAwesome)`
   margin-right: 16px;
-  font-size: 24px;
+  font-size: ${mediaquery(24)}px;
 `;
 
 export const Text = styled.Text`
