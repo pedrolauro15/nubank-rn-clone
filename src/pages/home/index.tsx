@@ -8,6 +8,7 @@ import MyCards from "../../components/my-cards";
 import { ScrollView } from "react-native";
 import { ligthTheme } from "../../styles/themes/light";
 import { Container, ContentContainer } from "./styles";
+import Invest from "../../components/invest";
 
 const Home: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
           <Divider />
           <CreditCard />
           <Divider />
+          <Invest />
         </ContentContainer>
       </Container>
     </ScrollView>
