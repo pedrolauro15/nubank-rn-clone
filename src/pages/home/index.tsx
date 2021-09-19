@@ -9,6 +9,7 @@ import { ScrollView } from "react-native";
 import { ligthTheme } from "../../styles/themes/light";
 import { Container, ContentContainer } from "./styles";
 import Invest from "../../components/invest";
+import Loan from "../../components/loan";
 
 const Home: React.FC = () => {
   return (
@@ -26,6 +27,9 @@ const Home: React.FC = () => {
           <CreditCard />
           <Divider />
           <Invest />
+          <Divider />
+          <Loan />
+          <Divider />
         </ContentContainer>
       </Container>
     </ScrollView>
