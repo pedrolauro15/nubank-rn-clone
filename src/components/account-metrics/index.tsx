@@ -1,13 +1,11 @@
 import React from 'react';
-import { Container, MetricsHeader, MetricsTitle, ArrowIcon, Ammount } from './styles';
+import ComponentHeader from '../component-header';
+import { Container, Ammount } from './styles';
 
 const AccountMetrics: React.FC = () => {
   return (
     <Container>
-      <MetricsHeader>
-        <MetricsTitle>Conta</MetricsTitle>
-        <ArrowIcon name="chevron-right"/>
-      </MetricsHeader>
+      <ComponentHeader title="Conta" />
       <Ammount>R$ 98227,32</Ammount>
     </Container>
   );

@@ -1,10 +1,11 @@
 import React from "react";
-import { ScrollView } from "react-native";
 import AccountMetrics from "../../components/account-metrics";
 import ActionList from "../../components/action-list";
+import CreditCard from "../../components/credit-card";
 import Divider from "../../components/divider";
 import Header from "../../components/header";
 import MyCards from "../../components/my-cards";
+import { ScrollView } from "react-native";
 import { ligthTheme } from "../../styles/themes/light";
 import { Container, ContentContainer } from "./styles";
 
@@ -20,6 +21,8 @@ const Home: React.FC = () => {
           <AccountMetrics />
           <ActionList />
           <MyCards />
+          <Divider />
+          <CreditCard />
           <Divider />
         </ContentContainer>
       </Container>
