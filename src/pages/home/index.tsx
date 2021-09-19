@@ -10,6 +10,7 @@ import { ligthTheme } from "../../styles/themes/light";
 import { Container, ContentContainer } from "./styles";
 import Invest from "../../components/invest";
 import Loan from "../../components/loan";
+import LifeInsurance from "../../components/life-insurance";
 
 const Home: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const Home: React.FC = () => {
           <Divider />
           <Loan />
           <Divider />
+          <LifeInsurance />
         </ContentContainer>
       </Container>
     </ScrollView>
